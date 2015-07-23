@@ -4,7 +4,7 @@ angular.module('kargo')
     function getPosts() {
         return $http.get('http://jsonplaceholder.typicode.com/posts').then(function(response) {
             return response.data;
-        })
+        });
     }
     return {
       getPosts : getPosts

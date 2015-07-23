@@ -1,7 +1,13 @@
-app.config(function ($stateProvider) {
+angular.module('kargo')
+ .config(function ($stateProvider) {
     $stateProvider.state('posts', {
         url: '/',
         templateUrl: '/pre-build/posts/posts.html',
-        controller: 'PostsController'
+        controller: 'PostsController',
+        resolve: {
+            posts: function(Posts) {
+                return Posts.getPosts();
+            }
+        }
     });
-});
+ });

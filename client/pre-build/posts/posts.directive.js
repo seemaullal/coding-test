@@ -1,11 +1,14 @@
-angular.module('learndotApp')
- .directive('postsDirective', function () {
+angular.module('kargo')
+ .directive('posts', function () {
     return {
       restrict: 'E',
       templateUrl: '/pre-build/posts/postsDirective.html',
       scope: {
-        postTitle: '=',
+        postId: '=',
         postName: '='
+      },
+      link: function(scope,element,attr) {
+        console.log(scope);
       }
     };
 });
