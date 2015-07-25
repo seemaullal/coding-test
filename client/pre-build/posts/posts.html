@@ -1,5 +1,12 @@
 <section>
-<div ng-repeat="curPost in posts">
-<posts post-name="curPost.title" post-id="curPost.id">
-</div>
+<table class="table table-hover">
+<tr>
+    <th>ID</th>
+    <th>Title</th>
+</tr>
+<span ng-repeat="post in posts">
+<posts post-name="post.title" post-id="post.id">
+</span>
+</table>
 </section>
+
