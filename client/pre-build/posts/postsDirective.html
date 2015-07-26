@@ -1,4 +1,8 @@
-<a href="" ui-sref="postDetails({id: postId})">
-<td>{{postId}}</td>
-<td>{{postName}}</td>
-</a>
+<table class="table table-hover">
+<tbody>
+<tr>
+<td ui-sref="postDetails({id: postId})">{{postId}}</td>
+<td id="right" ui-sref="postDetails({id: postId})">{{postName}}</td>
+</tr>
+</tbody>
+</table>

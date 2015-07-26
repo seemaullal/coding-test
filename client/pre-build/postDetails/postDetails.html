@@ -1,8 +1,28 @@
 <section>
-    <div class="md-list-item-text">
-        {{post.title}}
-        {{post.id}}
+    <div>
+        <md-content>
+            <md-tabs id="slow-animate" md-center-tabs="false"  md-border-bottom>
+                <md-tab label="Article Information">
+                    <md-content class="md-padding">
+                    <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+                        <span>
+                        <h3 class="md-display-1">{{post.title}}</h3>
+                        <div class="md-list-item-text">
+                         {{post.id}}
+                        </div>
+                        <div>By {{post.userId}}</div>
+                        <h4 class="md-subhead"> {{post.body}} </h4>
+                        </span>
+                        </md-whiteframe>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Analytics">
+                    <md-content class="md-padding">
+                        <h1 class="md-display-2"></h1>
+                        <p>Pick the date you want to pick</p>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </md-content>
     </div>
-    <div>By {{post.userId}}</div>
-    <p> {{post.body}} </p>
 </section>
