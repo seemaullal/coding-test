@@ -1,0 +1,17 @@
+<md-grid-list md-cols="3" md-row-height="fit">
+    <md-grid-tile>
+        <span class="md-subhead extra-padding">Start Date</span>
+        <mb-datepicker element-id='date1' arrows="arrows" calendar-header="header" date="date1" date-format="YYYY-MM-DD"></mb-datepicker>
+    </md-grid-tile>
+    <md-grid-tile>
+        <span class="md-subhead extra-padding">End Date</span>
+        <mb-datepicker element-id='date2' arrows="arrows" calendar-header="header" date="date2" date-format="YYYY-MM-DD"></mb-datepicker>
+    </md-grid-tile>
+    <md-grid-tile>
+        <md-button class="md-raised md-primary" ng-click="pickDate(date)">Get Analytics</md-button>
+    </md-grid-tile>
+    <md-grid-tile>
+</md-grid-list>
+<pre ng-show="data">
+{{ data | json }}
+</pre>
