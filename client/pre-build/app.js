@@ -1,4 +1,4 @@
-var app = angular.module('kargo', ['ui.router', 'ngMaterial', 'ngTable']);
+var app = angular.module('kargo', ['ui.router', 'ngMaterial', 'materialDatePicker']);
 
 app.config(function ($urlRouterProvider, $locationProvider) {
    // This turns off hashbang urls (/#about) and changes it to something normal (/about)

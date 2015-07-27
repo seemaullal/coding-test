@@ -27,11 +27,6 @@ gulp.task('default', function() {
 });
 
 
-// Database seed
-gulp.task('seedDB', function() {
-    run('node seed.js').exec();
-});
-
 
 // Build tasks
 //// Build all

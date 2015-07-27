@@ -23,6 +23,10 @@
   }
 }
 
+pre {
+  margin-top: 30px;
+}
+
 @import 'navbar/navbar';
 @import 'posts/posts';
 @import 'postDetails/postDetails';
