@@ -9,8 +9,6 @@ var clientPath = path.join(__dirname, '../client');
 var buildPath = path.join(__dirname, '../client/build');    // for gulped files
 var indexHtmlPath = path.join(__dirname, './index.html');
 var nodePath = path.join(__dirname, '../node_modules');
-
-
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(clientPath));
 app.use(express.static(buildPath));
 app.use(express.static(nodePath));
+app.use('/api', require('./api'));
 
 /*
 Provides a 404 for times

@@ -15,7 +15,6 @@ var app = require('./app');
   });
 }))
 .catch(function(err) {
-  console.log('Problem starting up!', chalk.red(err.message));
-  console.log('I\'m out!');
+  console.log('Problem starting up :(', chalk.red(err.message));
   process.kill(1);
 });

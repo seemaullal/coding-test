@@ -9,7 +9,6 @@ angular.module('kargo')
       },
       transclude: true,
       link: function(scope,element,attr) {
-        console.log(scope);
       }
     };
 });
