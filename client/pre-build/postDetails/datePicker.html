@@ -12,6 +12,11 @@
     </md-grid-tile>
     <md-grid-tile>
 </md-grid-list>
+<section>
+<div class="top-space" layout="row" layout-sm="column" layout-align="space-around">
+<md-progress-circular ng-show="inProgress" class="md-hue-2" md-mode="indeterminate"></md-progress-circular>
+</div>
 <pre ng-show="data">
 {{ data | json }}
 </pre>
+</section>
