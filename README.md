@@ -1,4 +1,4 @@
-# ** Article Information and Analytics ** #
+# **Article Information and Analytics** #
 ### View different posts loaded from an external API and also view analytics regarding each post which contains tracker data. ###
 
 
