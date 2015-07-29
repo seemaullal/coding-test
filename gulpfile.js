@@ -6,9 +6,7 @@ var concat = require('gulp-concat');
 var runSeq = require('run-sequence');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
-var mocha = require('gulp-mocha');
 var babel = require('gulp-babel');
-
 
 // Default
 gulp.task('default', function() {
@@ -22,14 +20,11 @@ gulp.task('default', function() {
         runSeq('buildCSS');
     });
 
-    gulp.watch(['server/**/*.js'], ['testServerJS']);
-
 });
 
 
-
 // Build tasks
-//// Build all
+//// Compile SCSS and JS files into build.css and build.js
 gulp.task('build', function() {
 	runSeq(['buildJS', 'buildCSS']);
 });
@@ -52,10 +47,4 @@ gulp.task('buildCSS', function () {
         .pipe(gulp.dest('./client/build'));
 });
 
-
-// Testing
-gulp.task('testServerJS', function() {
-    return gulp.src('./server/**/*.spec.js', {read: false})
-        .pipe(mocha({reporter: 'spec'}));
-});
 
